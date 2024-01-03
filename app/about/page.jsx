@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Hero from "../../components/Hero";
+import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 
 const about = () => {

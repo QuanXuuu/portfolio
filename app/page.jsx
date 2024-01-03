@@ -1,9 +1,8 @@
 "use client";
 
+import React, { useState } from "react";
 import Hero from "../components/Hero";
 import Navbar from "@/components/Navbar";
-
-import React, { useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,7 +20,7 @@ export default function Home() {
         <Hero
           heading="Quan Xu"
           subHeading="Web Developer"
-          message="I am frontend developer from Krempe, Germany."
+          message="I am a frontend developer from Krempe, Germany."
         />
       </div>
     </div>
