@@ -7,11 +7,6 @@ const Hero = ({ heading, subHeading, message }) => {
   return (
     <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
       <div>
-        {/* Profile Photo */}
-        {/* <div className="mx-auto w-64 h-64">
-            <Image src={quan} alt="profilePic" className="rounded-full" />
-          </div> */}
-
         <div className="text-center p-10">
           <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
             {heading}
