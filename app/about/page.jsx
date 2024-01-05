@@ -3,12 +3,14 @@
 import React, { useState } from "react";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import About from "@/components/About";
 
 const about = () => {
   return (
     <div>
       <Navbar />
-      <Hero heading="About Me" />
+      <Hero />
+      <About />
     </div>
   );
 };

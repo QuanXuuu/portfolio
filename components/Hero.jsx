@@ -1,32 +1,58 @@
 import React from "react";
-import Image from "next/image";
-import { FaGithub, FaLinkedin, FaCloudDownloadAlt } from "react-icons/fa";
-import quan from "../public/profile.png";
+import Link from "next/link";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { MdOutlineMarkEmailUnread } from "react-icons/md";
+import { BsFilePersonFill } from "react-icons/bs";
 
 const Hero = ({ heading, subHeading, message }) => {
   return (
-    <div className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
-      <div>
-        <div className="text-center p-10">
-          <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
-            {heading}
-          </h2>
-          <h3 className="text-2xl py-2 md:text-3xl dark:text-gray-300">
-            {subHeading}
-          </h3>
-          <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-l mx-auto dark:text-gray-300">
-            {message}
+    <div className="w-full h-screen text-center">
+      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+        <div>
+          {/* Heading */}
+          <h1 className="py-4 text-gray-700">
+            Hi, I&apos;m <span className="text-primary-light">Quan</span>
+          </h1>
+          <h2 className="py-2 text-gray-700">A Front-end Web Developer</h2>
+          <p className="py-4 text-lg leading-8 lg:text-xl lg:py-6 lg:leading-10 text-gray-600 max-w-[70%] m-auto">
+            I&apos;m focused on building responsive front-end web applications
+            while learning back-end technologies.
           </p>
-          <a
-            className="bg-gradient-to-r from-cyan-600 to-teal-600 text-white py-2 px-4 m-4 rounded-md "
-            herf="#"
-          >
-            Resume
-          </a>
-        </div>
-        <div className="text-4xl flex justify-center gap-16 py-3 text-gray-600 dark:text-white">
-          <FaGithub />
-          <FaLinkedin />
+
+          {/* Icons */}
+          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+            <a
+              href="https://www.linkedin.com/in/quanxuuu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="p-6 text-2xl text-gray-600 hover:text-primary-light cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaLinkedinIn />
+              </div>
+            </a>
+
+            <a
+              href="https://github.com/quanxuuu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="p-6 text-2xl text-gray-600 hover:text-primary-light cursor-pointer hover:scale-110 ease-in duration-300">
+                <FaGithub />
+              </div>
+            </a>
+
+            <Link href="/contact">
+              <div className="p-6 text-2xl text-gray-600 hover:text-primary-light cursor-pointer hover:scale-110 ease-in duration-300">
+                <MdOutlineMarkEmailUnread />
+              </div>
+            </Link>
+
+            <Link href="/resume">
+              <div className="p-6 text-2xl text-gray-600 hover:text-primary-light cursor-pointer hover:scale-110 ease-in duration-300">
+                <BsFilePersonFill />
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

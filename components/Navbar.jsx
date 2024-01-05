@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-// import Image from "next/image";
-// import logo from "../public/assets/logo.png";
 import { TbHexagonLetterQ } from "react-icons/tb";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -17,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed w-full h-20 z-[100] ease-in-out duration-300">
+    <div className="fixed w-full h-20 z-[100] ease-in-out duration-500 bg-white">
       <div
         className={
           isNavOpen
@@ -69,7 +67,7 @@ const Navbar = () => {
               className={
                 isNavOpen
                   ? "fixed top-0 left-0  w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-7 ease-in duration-500"
-                  : "hidden"
+                  : "fixed left-[-100%] top-0 p-7 ease-in duration-500"
               }
             >
               <div className="flex w-full items-center justify-between border-b border-gray-200 pb-5">
