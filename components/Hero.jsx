@@ -13,7 +13,7 @@ const Hero = ({ heading, subHeading, message }) => {
           <h1 className="py-4 text-gray-700">
             Hi, I&apos;m <span className="text-primary-light">Quan</span>
           </h1>
-          <h2 className="py-2 text-gray-700">A Front-end Web Developer</h2>
+          <h2 className="py-2 text-gray-700">A Web Developer</h2>
           <p className="py-4 text-lg leading-8 lg:text-xl lg:py-6 lg:leading-10 text-gray-600 max-w-[70%] m-auto">
             I&apos;m focused on building responsive front-end web applications
             while learning back-end technologies.

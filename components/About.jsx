@@ -11,38 +11,27 @@ const About = () => {
             About Me
           </h2>
           <p className="py-2 text-lg text-gray-600">
-            Hey! I&apos;m Quan Xu, base in Krempe, Germany. I&apos;m really into
-            languages - the way people talk and even how computers communicate.
-            I went all the way and got a master&apos;degree in Linguistics.
+            Hey! I&apos;m Quan Xu, an enthusiastic and creative Front-end Web
+            Developer based in Krempe, Germany. With a solid background in web
+            development and profound appreciation for design, I am dedicated to
+            crafting user-friendly and visually appealing web experiences.These
+            experiences have enabled me to refine my skills and stay current
+            with the latest front-end technologies and trends.
           </p>
 
           <p className="py-2 text-lg text-gray-600">
-            My journey took me to different corners of the world - studying and
-            working in <span className="text-primary-light">China</span>,{" "}
-            <span className="text-primary-light">Japan</span>,
-            <span className="text-primary-light">Germany</span> and{" "}
-            <span className="text-primary-light">Singapore</span>. It was a
-            rollercoaster of languages and experiences.
+            Additionally, I hold a master&apos;s degree in Linguistics. Learning
+            to code feels like decoding a different kind of language, one
+            that&apos;s all about making things happen in the digital realm.
           </p>
 
           <p className="py-2 text-lg text-gray-600">
-            And then there&apos;s coding - my latest passion! I joined two
-            bootcamps to really understand the language of computers. It&apos;
-            fascinating how coding opens up a whole new world of possibilities.
-          </p>
-
-          <p className="py-2 text-lg text-gray-600">
-            Learning to code feels like decoding a different kind of language,
-            one that&apos;s all about making things happen in the digital realm.
-            I get a real kick out of it - the problem-solving, the creativity,
-            it&apos;s like crafting something out of thin air.
-          </p>
-
-          <p className="py-2 text-lg text-gray-600">
-            Ready to see where these languages and coding skills take me next!
+            Please feel free to explore my portfolio to see examples of my work.
+            If you have any questions or would like to collaborate, please
+            don&apos;t hesitate to reach out.
           </p>
         </div>
-        <div className="w-full h-auto m-auto shadow-md shadow-gray-400 rounded-xl flex items-center justify-center p-6 hover:scale-105 ease-in duration-300">
+        <div className="w-full h-auto m-auto shadow-md shadow-gray-400 rounded-xl flex items-center justify-center p-2 hover:scale-105 ease-in duration-300">
           <Image src={profilePic} alt="Profile Pic" className="rounded-md" />
         </div>
       </div>

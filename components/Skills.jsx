@@ -4,9 +4,13 @@ import html from "@/public/assets/skills/html.png";
 import css from "@/public/assets/skills/css.png";
 import javascript from "@/public/assets/skills/javascript.png";
 import react from "@/public/assets/skills/react.png";
+import nextjs from "@/public/assets/skills/nextjs.png";
 import tailwind from "@/public/assets/skills/tailwind.png";
+import sass from "@/public/assets/skills/sass.png";
 import node from "@/public/assets/skills/node.png";
+import expressjs from "@/public/assets/skills/expressjs.svg";
 import mongo from "@/public/assets/skills/mongo.png";
+import postman from "@/public/assets/skills/postman.svg";
 import github from "@/public/assets/skills/github.png";
 
 const Skills = () => {
@@ -53,7 +57,7 @@ const Skills = () => {
                 />
               </div>
               <div className="flex flex-col items-center justify-center">
-                <h3>Javascript</h3>
+                <h3>JavaScript</h3>
               </div>
             </div>
           </div>
@@ -70,6 +74,18 @@ const Skills = () => {
             </div>
           </div>
 
+          {/* Nextjs */}
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image src={nextjs} width={64} height={64} alt="react" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>NextJS</h3>
+              </div>
+            </div>
+          </div>
+
           {/* tailwind */}
           <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
@@ -78,6 +94,18 @@ const Skills = () => {
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>Tailwind</h3>
+              </div>
+            </div>
+          </div>
+
+          {/* sass */}
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image src={sass} width={64} height={64} alt="sass" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>SASS</h3>
               </div>
             </div>
           </div>
@@ -94,6 +122,18 @@ const Skills = () => {
             </div>
           </div>
 
+          {/* ExpressJS */}
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image src={expressjs} width={64} height={64} alt="ExpressJS" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>ExpressJS</h3>
+              </div>
+            </div>
+          </div>
+
           {/* Mongo */}
           <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
@@ -102,6 +142,18 @@ const Skills = () => {
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>MongoDB</h3>
+              </div>
+            </div>
+          </div>
+
+          {/* Postman */}
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300">
+            <div className="grid grid-cols-2 gap-4 justify-center items-center">
+              <div className="m-auto">
+                <Image src={postman} width={64} height={64} alt="Postman" />
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <h3>Postman</h3>
               </div>
             </div>
           </div>
