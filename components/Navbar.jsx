@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { TbHexagonLetterQ } from "react-icons/tb";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
@@ -8,19 +8,36 @@ import { BsFilePersonFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [hasShadow, setHasShadow] = useState(false);
 
   const handleNav = () => {
-    console.log("test");
     setIsNavOpen(!isNavOpen);
   };
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setHasShadow(true);
+      } else {
+        setHasShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
+
   return (
-    <div className="fixed w-full h-20 z-[100] ease-in-out duration-500 bg-white">
+    <div
+      className={
+        hasShadow
+          ? "fixed w-full h-20 shadow-2xl z-[100]"
+          : "fixed w-full h-20 z-[100]"
+      }
+    >
       <div
         className={
           isNavOpen
-            ? "flex justify-between items-center w-full h-full px-8 2xl:px-16 border-b border-gray-200"
-            : "flex justify-between items-center w-full h-full px-8 2xl:px-16 border-b border-gray-200"
+            ? "flex justify-between items-center w-full h-full px-8 2xl:px-16 "
+            : "flex justify-between items-center w-full h-full px-8 2xl:px-16"
         }
       >
         {/* Logo */}

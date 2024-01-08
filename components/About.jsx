@@ -11,10 +11,11 @@ const About = () => {
             About Me
           </h2>
           <p className="py-2 text-lg text-gray-600">
-            Hey! I&apos;m Quan Xu, an enthusiastic and creative Front-end Web
-            Developer based in Krempe, Germany. With a solid background in web
-            development and profound appreciation for design, I am dedicated to
-            crafting user-friendly and visually appealing web experiences.These
+            Hey! I&apos;m Quan Xu, an enthusiastic and creative
+            <span> Front-end Web Developer</span>
+            based in Krempe, Germany. With a solid background in web development
+            and profound appreciation for design, I am dedicated to crafting
+            user-friendly and visually appealing web experiences.These
             experiences have enabled me to refine my skills and stay current
             with the latest front-end technologies and trends.
           </p>
