@@ -29,7 +29,7 @@ const Navbar = () => {
     <div
       className={
         hasShadow
-          ? "fixed w-full h-20 shadow-2xl z-[100]"
+          ? "fixed w-full h-20 shadow-xl z-[100] "
           : "fixed w-full h-20 z-[100]"
       }
     >
