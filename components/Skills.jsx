@@ -15,12 +15,12 @@ import github from "@/public/assets/skills/github.png";
 
 const Skills = () => {
   return (
-    <div className="w-full lg:h-screen p-2 py-8 mt-28">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full sm:px-10">
-        <p className="uppercase font-bold text-xl tracking-widest text-primary-light mb-12">
+    <div id="skills" className="w-full lg:h-screen p-2">
+      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-6">
           Skills
         </p>
-        <div className="mt-5 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* HMTL */}
           <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">

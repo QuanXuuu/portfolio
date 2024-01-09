@@ -29,40 +29,48 @@ const Navbar = () => {
     <div
       className={
         hasShadow
-          ? "fixed w-full h-20 shadow-xl z-[100] "
-          : "fixed w-full h-20 z-[100]"
+          ? "fixed w-full h-20 shadow-md z-[100] bg-white ease-in-out duration-300"
+          : "fixed w-full h-20 z-[100] bg-white"
       }
     >
-      <div
-        className={
-          isNavOpen
-            ? "flex justify-between items-center w-full h-full px-8 2xl:px-16 "
-            : "flex justify-between items-center w-full h-full px-8 2xl:px-16"
-        }
-      >
+      <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16 ">
         {/* Logo */}
         <div>
           <Link href="/">
-            <TbHexagonLetterQ className="text-primary" size={30} />
+            <TbHexagonLetterQ className="text-primary" size={35} />
           </Link>
         </div>
         <div>
           <ul className="hidden md:flex ">
-            <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/about">About</Link>
-            </li>
-            <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/skills">Skills</Link>
-            </li>
-            <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/projects">Projects</Link>
-            </li>
-            <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/contact">Contact</Link>
-            </li>
+            <Link href="/">
+              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+                Home
+              </li>
+            </Link>
+
+            <Link href="/#about">
+              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+                About
+              </li>
+            </Link>
+
+            <Link href="/#skills">
+              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+                Skills
+              </li>
+            </Link>
+
+            <Link href="/#projects">
+              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+                Projects
+              </li>
+            </Link>
+
+            <Link href="/#contact">
+              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+                Contact
+              </li>
+            </Link>
           </ul>
 
           {/* Hamburger Icon */}
@@ -72,6 +80,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
+        {/* Overlay */}
         {isNavOpen && (
           <div
             className={
@@ -80,6 +89,7 @@ const Navbar = () => {
                 : ""
             }
           >
+            {/* Side Drawer Menu */}
             <div
               className={
                 isNavOpen
@@ -101,36 +111,50 @@ const Navbar = () => {
               </div>
               <div className="py-4 flex flex-col">
                 <ul className="uppercase">
-                  <li
-                    onClick={() => setIsNavOpen(false)}
-                    className="py-4 text-base hover:text-gray-600"
-                  >
-                    <Link href="/">Home</Link>
-                  </li>
-                  <li
-                    onClick={() => setIsNavOpen(false)}
-                    className="py-4 text-base hover:text-gray-600"
-                  >
-                    <Link href="/about">About</Link>
-                  </li>
-                  <li
-                    onClick={() => setIsNavOpen(false)}
-                    className="py-4 text-base hover:text-gray-600"
-                  >
-                    <Link href="/skills">skills</Link>
-                  </li>
-                  <li
-                    onClick={() => setIsNavOpen(false)}
-                    className="py-4 text-base hover:text-gray-600"
-                  >
-                    <Link href="/projects">Projects</Link>
-                  </li>
-                  <li
-                    onClick={() => setIsNavOpen(false)}
-                    className="py-4 text-base hover:text-gray-600"
-                  >
-                    <Link href="/contact">Contact</Link>
-                  </li>
+                  <Link href="/">
+                    <li
+                      onClick={() => setIsNavOpen(false)}
+                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
+                    >
+                      Home
+                    </li>
+                  </Link>
+
+                  <Link href="/#about">
+                    <li
+                      onClick={() => setIsNavOpen(false)}
+                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
+                    >
+                      About
+                    </li>
+                  </Link>
+
+                  <Link href="/#skills">
+                    <li
+                      onClick={() => setIsNavOpen(false)}
+                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
+                    >
+                      skills
+                    </li>
+                  </Link>
+
+                  <Link href="/#projects">
+                    <li
+                      onClick={() => setIsNavOpen(false)}
+                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
+                    >
+                      Projects
+                    </li>
+                  </Link>
+
+                  <Link href="/#contact">
+                    <li
+                      onClick={() => setIsNavOpen(false)}
+                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
+                    >
+                      Contact
+                    </li>
+                  </Link>
                 </ul>
 
                 <div className="pt-32 flex items-center justify-between my-4 w-full sm:w-[80%] ">
@@ -139,7 +163,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="text-2xl text-gray-800 hover:text-gray-600 cursor-pointer hover: scale-105 ease-in duration-300">
+                    <div className="text-2xl text-gray-700 hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300">
                       <FaLinkedinIn />
                     </div>
                   </a>
@@ -149,24 +173,24 @@ const Navbar = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="text-2xl text-gray-800 hover:text-gray-600 cursor-pointer hover: scale-105 ease-in duration-300">
+                    <div className="text-2xl text-gray-700 hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300">
                       <FaGithub />
                     </div>
                   </a>
 
-                  <Link href="/contact">
+                  <Link href="/#contact">
                     <div
                       onClick={() => setIsNavOpen(!isNavOpen)}
-                      className="text-2xl text-gray-800 hover:text-gray-600 cursor-pointer hover: scale-105 ease-in duration-300"
+                      className="text-2xl text-gray-700 hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300"
                     >
                       <MdOutlineMarkEmailUnread />
                     </div>
                   </Link>
 
-                  <Link href="/resume">
+                  <Link href="/#resume">
                     <div
                       onClick={() => setIsNavOpen(!isNavOpen)}
-                      className="text-2xl text-gray-800 hover:text-gray-600 cursor-pointer hover: scale-105 ease-in duration-300"
+                      className="text-2xl text-gray-700 hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300"
                     >
                       <BsFilePersonFill />
                     </div>

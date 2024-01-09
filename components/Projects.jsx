@@ -4,9 +4,9 @@ import TCGMON from "@/public/assets/projects/TCGMON.png";
 
 const Projects = () => {
   return (
-    <div className="w-full p-2 py-8">
+    <div id="projects" className="w-full mt-12">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="uppercase font-bold text-xl tracking-widest text-primary-light mb-6">
+        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-8 ">
           Projects
         </p>
         <div className="grid md:grid-cols-2 gap-8">
@@ -14,7 +14,8 @@ const Projects = () => {
             title="TCGMON"
             backgroundImg={TCGMON}
             technologies="React | SASS | MongoDB"
-            projectUrl="https://github.com/QuanXuuu/DCI-TCGMON-project"
+            projectPageUrl="https://tcgmon-temd.onrender.com/"
+            projectCodeUrl="https://github.com/QuanXuuu/DCI-TCGMON-project"
           />
         </div>
       </div>

@@ -4,9 +4,9 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { BsFilePersonFill } from "react-icons/bs";
 
-const Hero = ({ heading, subHeading, message }) => {
+const Hero = () => {
   return (
-    <div className="w-full h-screen text-center">
+    <div id="home" className="w-full h-screen text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           {/* Heading */}
