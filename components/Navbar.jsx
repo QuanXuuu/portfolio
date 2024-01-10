@@ -1,5 +1,8 @@
+"use client";
+
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { TbHexagonLetterQ } from "react-icons/tb";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -26,12 +29,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div
+    <motion.div
       className={
         hasShadow
-          ? "fixed w-full h-20 shadow-md z-[100] bg-white ease-in-out duration-300"
-          : "fixed w-full h-20 z-[100] bg-white"
+          ? "fixed w-full h-20 shadow-md z-[999] bg-stone-50 bg-opacity-95 ease-in-out duration-300"
+          : "fixed w-full h-20 z-[999] bg-stone-50 bg-opacity-95"
       }
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
     >
       <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16 ">
         {/* Logo */}
@@ -201,7 +206,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
