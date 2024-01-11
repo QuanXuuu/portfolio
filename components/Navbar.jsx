@@ -57,7 +57,7 @@ const Navbar = () => {
                   "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
                   {
                     "border-b-2": activeSection === "home",
-                    // "border-red-200": activeSection === "home",
+                    "border-red-200": activeSection === "home",
                   }
                 )}
                 onClick={() => setActiveSection("home")}
@@ -72,7 +72,7 @@ const Navbar = () => {
                   "ml-10 text-sm uppercase  hover:text-primary-light hover:scale-105 ease-in duration-300",
                   {
                     "border-b-2": activeSection === "about",
-                    // "border-red-200": activeSection === "about",
+                    "border-red-200": activeSection === "about",
                   }
                 )}
                 onClick={() => setActiveSection("about")}
@@ -87,7 +87,7 @@ const Navbar = () => {
                   "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
                   {
                     "border-b-2": activeSection === "skills",
-                    // "border-red-200": activeSection === "skills",
+                    "border-red-200": activeSection === "skills",
                   }
                 )}
                 onClick={() => setActiveSection("skills")}
@@ -102,7 +102,7 @@ const Navbar = () => {
                   "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
                   {
                     "border-b-2": activeSection === "projects",
-                    // "border-red-200": activeSection === "projects",
+                    "border-red-200": activeSection === "projects",
                   }
                 )}
                 onClick={() => setActiveSection("projects")}
@@ -117,7 +117,7 @@ const Navbar = () => {
                   "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
                   {
                     "border-b-2": activeSection === "contact",
-                    // "border-red-200": activeSection === "contact",
+                    "border-red-200": activeSection === "contact",
                   }
                 )}
                 onClick={() => setActiveSection("contact")}
