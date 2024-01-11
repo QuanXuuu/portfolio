@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 import html from "@/public/assets/skills/html.png";
 import css from "@/public/assets/skills/css.png";
@@ -12,12 +14,25 @@ import expressjs from "@/public/assets/skills/expressjs.svg";
 import mongo from "@/public/assets/skills/mongo.png";
 import postman from "@/public/assets/skills/postman.svg";
 import github from "@/public/assets/skills/github.png";
+import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 const Skills = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.45,
+  });
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("skills");
+    }
+  }, [inView, setActiveSection]);
+
   return (
-    <div id="skills" className="w-full lg:h-screen p-2">
+    <section ref={ref} id="skills" className="w-full p-2 scroll-mt-28 mb-40">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-6">
+        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-10 ">
           Skills
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -171,7 +186,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

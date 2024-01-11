@@ -8,10 +8,14 @@ import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { BsFilePersonFill } from "react-icons/bs";
+import clsx from "clsx";
+import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [hasShadow, setHasShadow] = useState(false);
+
+  const { activeSection, setActiveSection } = useActiveSectionContext();
 
   const handleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -48,31 +52,76 @@ const Navbar = () => {
         <div>
           <ul className="hidden md:flex ">
             <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+              <li
+                className={clsx(
+                  "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
+                  {
+                    "border-b-2": activeSection === "home",
+                    // "border-red-200": activeSection === "home",
+                  }
+                )}
+                onClick={() => setActiveSection("home")}
+              >
                 Home
               </li>
             </Link>
 
             <Link href="/#about">
-              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+              <li
+                className={clsx(
+                  "ml-10 text-sm uppercase  hover:text-primary-light hover:scale-105 ease-in duration-300",
+                  {
+                    "border-b-2": activeSection === "about",
+                    // "border-red-200": activeSection === "about",
+                  }
+                )}
+                onClick={() => setActiveSection("about")}
+              >
                 About
               </li>
             </Link>
 
             <Link href="/#skills">
-              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+              <li
+                className={clsx(
+                  "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
+                  {
+                    "border-b-2": activeSection === "skills",
+                    // "border-red-200": activeSection === "skills",
+                  }
+                )}
+                onClick={() => setActiveSection("skills")}
+              >
                 Skills
               </li>
             </Link>
 
             <Link href="/#projects">
-              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+              <li
+                className={clsx(
+                  "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
+                  {
+                    "border-b-2": activeSection === "projects",
+                    // "border-red-200": activeSection === "projects",
+                  }
+                )}
+                onClick={() => setActiveSection("projects")}
+              >
                 Projects
               </li>
             </Link>
 
             <Link href="/#contact">
-              <li className="ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300">
+              <li
+                className={clsx(
+                  "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
+                  {
+                    "border-b-2": activeSection === "contact",
+                    // "border-red-200": activeSection === "contact",
+                  }
+                )}
+                onClick={() => setActiveSection("contact")}
+              >
                 Contact
               </li>
             </Link>
