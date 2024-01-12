@@ -14,7 +14,7 @@ const Contact = () => {
 
   useEffect(() => {
     if (inView) {
-      setActiveSection("contact");
+      setActiveSection("Contact");
     }
   }, [inView, setActiveSection]);
 

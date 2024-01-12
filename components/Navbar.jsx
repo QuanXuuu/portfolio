@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import { TbHexagonLetterQ } from "react-icons/tb";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
@@ -51,80 +52,23 @@ const Navbar = () => {
         </div>
         <div>
           <ul className="hidden md:flex ">
-            <Link href="/">
-              <li
-                className={clsx(
-                  "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
-                  {
-                    "border-b-2": activeSection === "home",
-                    "border-red-200": activeSection === "home",
-                  }
-                )}
-                onClick={() => setActiveSection("home")}
-              >
-                Home
+            {links.map((link) => (
+              <li key={link.hash}>
+                <Link
+                  href={link.hash}
+                  className={clsx(
+                    "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
+                    {
+                      "border-b-2": activeSection === link.name,
+                      "border-red-200": activeSection === link.name,
+                    }
+                  )}
+                  onClick={() => setActiveSection(link.name)}
+                >
+                  {link.name}
+                </Link>
               </li>
-            </Link>
-
-            <Link href="/#about">
-              <li
-                className={clsx(
-                  "ml-10 text-sm uppercase  hover:text-primary-light hover:scale-105 ease-in duration-300",
-                  {
-                    "border-b-2": activeSection === "about",
-                    "border-red-200": activeSection === "about",
-                  }
-                )}
-                onClick={() => setActiveSection("about")}
-              >
-                About
-              </li>
-            </Link>
-
-            <Link href="/#skills">
-              <li
-                className={clsx(
-                  "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
-                  {
-                    "border-b-2": activeSection === "skills",
-                    "border-red-200": activeSection === "skills",
-                  }
-                )}
-                onClick={() => setActiveSection("skills")}
-              >
-                Skills
-              </li>
-            </Link>
-
-            <Link href="/#projects">
-              <li
-                className={clsx(
-                  "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
-                  {
-                    "border-b-2": activeSection === "projects",
-                    "border-red-200": activeSection === "projects",
-                  }
-                )}
-                onClick={() => setActiveSection("projects")}
-              >
-                Projects
-              </li>
-            </Link>
-
-            <Link href="/#contact">
-              <li
-                className={clsx(
-                  "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
-                  {
-                    "border-b-2": activeSection === "contact",
-                    "border-red-200": activeSection === "contact",
-                  }
-                )}
-                onClick={() => setActiveSection("contact")}
-              >
-                Contact
-              </li>
-            </Link>
+            ))}
           </ul>
 
           {/* Hamburger Icon */}
@@ -165,50 +109,17 @@ const Navbar = () => {
               </div>
               <div className="py-4 flex flex-col">
                 <ul className="uppercase">
-                  <Link href="/">
-                    <li
-                      onClick={() => setIsNavOpen(false)}
-                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
-                    >
-                      Home
+                  {links.map((link) => (
+                    <li key={link.hash} className="py-4">
+                      <Link
+                        href={link.hash}
+                        onClick={() => setIsNavOpen(false)}
+                        className="text-md hover:text-primary-light hover:scale-y-110 ease-in duration-300"
+                      >
+                        {link.name}
+                      </Link>
                     </li>
-                  </Link>
-
-                  <Link href="/#about">
-                    <li
-                      onClick={() => setIsNavOpen(false)}
-                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
-                    >
-                      About
-                    </li>
-                  </Link>
-
-                  <Link href="/#skills">
-                    <li
-                      onClick={() => setIsNavOpen(false)}
-                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
-                    >
-                      skills
-                    </li>
-                  </Link>
-
-                  <Link href="/#projects">
-                    <li
-                      onClick={() => setIsNavOpen(false)}
-                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
-                    >
-                      Projects
-                    </li>
-                  </Link>
-
-                  <Link href="/#contact">
-                    <li
-                      onClick={() => setIsNavOpen(false)}
-                      className="py-4 text-sm hover:text-primary-light hover:scale-y-110 ease-in duration-300"
-                    >
-                      Contact
-                    </li>
-                  </Link>
+                  ))}
                 </ul>
 
                 <div className="pt-32 flex items-center justify-between my-4 w-full sm:w-[80%] ">

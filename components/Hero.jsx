@@ -17,7 +17,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (inView) {
-      setActiveSection("home");
+      setActiveSection("Home");
     }
   }, [inView, setActiveSection]);
 

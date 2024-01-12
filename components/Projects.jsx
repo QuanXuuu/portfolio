@@ -14,7 +14,7 @@ const Projects = () => {
 
   useEffect(() => {
     if (inView) {
-      setActiveSection("projects");
+      setActiveSection("Projects");
     }
   }, [inView, setActiveSection]);
 
