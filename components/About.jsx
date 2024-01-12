@@ -35,27 +35,32 @@ const About = () => {
           </h2>
           <p className="py-2 text-lg">
             Hey! I&apos;m Quan Xu, an enthusiastic and creative
-            <span className="font-semibold underline">
+            <span className="font-semibold dark:text-primary-light">
               {" "}
               Full-stack Developer
             </span>{" "}
             based in Krempe,{" "}
-            <span className="font-semibold underline">Germany</span>. With a
-            solid background in web development and profound appreciation for
-            design, I am dedicated to crafting user-friendly and visually
-            appealing web experiences. These experiences have enabled me to
-            refine my skills and stay current with the latest technologies and
-            trends.
+            <span className="font-semibold dark:text-primary-light">
+              Germany
+            </span>
+            . With a solid background in web development and profound
+            appreciation for design, I am dedicated to crafting user-friendly
+            and visually appealing web experiences. These experiences have
+            enabled me to refine my skills and stay current with the latest
+            technologies and trends.
           </p>
 
           <p className="py-2 text-lg ">
             Additionally, I hold a{" "}
-            <span className="font-semibold underline">
+            <span className="font-semibold dark:text-primary-light">
               master&apos;s degree
             </span>{" "}
             in
-            <span className="font-semibold underline"> Linguistics</span>.
-            Learning to code feels like decoding a different kind of language,
+            <span className="font-semibold dark:text-primary-light">
+              {" "}
+              Linguistics
+            </span>
+            . Learning to code feels like decoding a different kind of language,
             one that&apos;s all about making things happen in the digital realm.
           </p>
 
