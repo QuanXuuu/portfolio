@@ -12,7 +12,7 @@ const Contact = () => {
   // const { ref } = useSectionsInView("Contact");
 
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.9,
   });
   const { setActiveSection } = useActiveSectionContext();
 
@@ -23,9 +23,9 @@ const Contact = () => {
   }, [inView, setActiveSection]);
 
   return (
-    <section ref={ref} id="contact" className="w-full p-2 mb-80">
+    <section ref={ref} id="contact" className="w-full p-2 mb-60">
       <div className="max-w-[1240px] mx-auto">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-6">
+        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light dark:text-primary mb-6">
           Contact
         </p>
 

@@ -37,8 +37,8 @@ const Navbar = () => {
     <motion.div
       className={
         hasShadow
-          ? "fixed w-full h-20 shadow-md z-[999] bg-stone-50 bg-opacity-95 ease-in-out duration-300"
-          : "fixed w-full h-20 z-[999] bg-stone-50 bg-opacity-95"
+          ? "fixed w-full h-20 shadow-md z-[999] bg-stone-50 ease-in-out duration-300 dark:bg-gray-900 dark:text-gray-50"
+          : "fixed w-full h-20 z-[999] bg-stone-50 dark:bg-gray-900 dark:text-gray-50"
       }
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -61,6 +61,7 @@ const Navbar = () => {
                     {
                       "border-b-2": activeSection === link.name,
                       "border-red-200": activeSection === link.name,
+                      "dark:border-gray-50": activeSection === link.name,
                     }
                   )}
                   onClick={() => setActiveSection(link.name)}
@@ -91,11 +92,11 @@ const Navbar = () => {
             <div
               className={
                 isNavOpen
-                  ? "fixed top-0 left-0  w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-7 ease-in duration-500"
+                  ? "fixed top-0 left-0  w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-7 ease-in duration-500 dark:bg-gray-950 dark:text-gray-50"
                   : "fixed left-[-100%] top-0 p-7 ease-in duration-500"
               }
             >
-              <div className="flex w-full items-center justify-between border-b border-gray-200 pb-5">
+              <div className="flex w-full items-center justify-between border-b border-gray-200 dark:boder-gray-50 pb-5">
                 <Link href="/">
                   <TbHexagonLetterQ className="text-primary" size={30} />
                 </Link>
@@ -114,7 +115,7 @@ const Navbar = () => {
                       <Link
                         href={link.hash}
                         onClick={() => setIsNavOpen(false)}
-                        className="text-md hover:text-primary-light hover:scale-y-110 ease-in duration-300"
+                        className="py-10 text-md hover:text-primary-light hover:scale-y-110 ease-in duration-300"
                       >
                         {link.name}
                       </Link>
@@ -128,7 +129,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="text-2xl text-gray-700 hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300">
+                    <div className="text-2xl hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300">
                       <FaLinkedinIn />
                     </div>
                   </a>
@@ -138,7 +139,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div className="text-2xl text-gray-700 hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300">
+                    <div className="text-2xl hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300">
                       <FaGithub />
                     </div>
                   </a>
@@ -146,7 +147,7 @@ const Navbar = () => {
                   <Link href="/#contact">
                     <div
                       onClick={() => setIsNavOpen(!isNavOpen)}
-                      className="text-2xl text-gray-700 hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300"
+                      className="text-2xl hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300"
                     >
                       <MdOutlineMarkEmailUnread />
                     </div>
@@ -155,7 +156,7 @@ const Navbar = () => {
                   <Link href="/#resume">
                     <div
                       onClick={() => setIsNavOpen(!isNavOpen)}
-                      className="text-2xl text-gray-700 hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300"
+                      className="text-2xl hover:text-primary-light cursor-pointer hover:scale-105 ease-in duration-300"
                     >
                       <BsFilePersonFill />
                     </div>

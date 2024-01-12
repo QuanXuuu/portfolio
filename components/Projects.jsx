@@ -8,7 +8,7 @@ import { useActiveSectionContext } from "@/context/ActiveSectionContext";
 // import { useSectionsInView } from "@/lib/hooks";
 
 const Projects = () => {
-  // const { ref } = useSectionsInView("Projects");
+  // const { ref } = useSectionsIn4iew("Projects");
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
@@ -16,14 +16,14 @@ const Projects = () => {
 
   useEffect(() => {
     if (inView) {
-      setActiveSection("About");
+      setActiveSection("Projects");
     }
   }, [inView, setActiveSection]);
 
   return (
     <section ref={ref} id="projects" className="w-full p-2 scroll-mt-20 mb-40">
       <div className="max-w-[1240px] mx-auto">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-8 ">
+        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light dark:text-primary mb-8 ">
           Projects
         </p>
         <div className="grid md:grid-cols-2 gap-8">

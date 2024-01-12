@@ -35,12 +35,12 @@ const Skills = () => {
   return (
     <section ref={ref} id="skills" className="w-full p-2 mb-40 scroll-mt-28">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-10 ">
+        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light dark:text-primary mb-10 ">
           Skills
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* HMTL */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={html} width={64} height={64} alt="html" />
@@ -52,7 +52,7 @@ const Skills = () => {
           </div>
 
           {/* CSS */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto ">
                 <Image src={css} width={64} height={64} alt="css" />
@@ -64,7 +64,7 @@ const Skills = () => {
           </div>
 
           {/* JS */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image
@@ -81,7 +81,7 @@ const Skills = () => {
           </div>
 
           {/* React */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={react} width={64} height={64} alt="react" />
@@ -93,7 +93,7 @@ const Skills = () => {
           </div>
 
           {/* Nextjs */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={nextjs} width={64} height={64} alt="react" />
@@ -105,7 +105,7 @@ const Skills = () => {
           </div>
 
           {/* tailwind */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={tailwind} width={64} height={64} alt="tailwind" />
@@ -117,7 +117,7 @@ const Skills = () => {
           </div>
 
           {/* sass */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={sass} width={64} height={64} alt="sass" />
@@ -129,7 +129,7 @@ const Skills = () => {
           </div>
 
           {/* node */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={node} width={64} height={64} alt="node" />
@@ -141,7 +141,7 @@ const Skills = () => {
           </div>
 
           {/* ExpressJS */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={expressjs} width={64} height={64} alt="ExpressJS" />
@@ -153,7 +153,7 @@ const Skills = () => {
           </div>
 
           {/* Mongo */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={mongo} width={64} height={64} alt="Mongo" />
@@ -165,7 +165,7 @@ const Skills = () => {
           </div>
 
           {/* Postman */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={postman} width={64} height={64} alt="Postman" />
@@ -177,7 +177,7 @@ const Skills = () => {
           </div>
 
           {/* Github */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
+          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
             <div className="grid grid-cols-2 gap-4 justify-center items-center">
               <div className="m-auto">
                 <Image src={github} width={64} height={64} alt="github" />
