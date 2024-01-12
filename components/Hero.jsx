@@ -8,10 +8,13 @@ import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { BsFilePersonFill } from "react-icons/bs";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+// import { useSectionsInView } from "@/lib/hooks";
 
 const Hero = () => {
+  // const { ref } = useSectionsInView("Home");
+
   const { ref, inView } = useInView({
-    threshold: 0.7,
+    threshold: 0.5,
   });
   const { setActiveSection } = useActiveSectionContext();
 

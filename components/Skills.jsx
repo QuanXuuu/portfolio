@@ -16,10 +16,13 @@ import postman from "@/public/assets/skills/postman.svg";
 import github from "@/public/assets/skills/github.png";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+// import { useSectionsInView } from "@/lib/hooks";
 
 const Skills = () => {
+  // const { ref } = useSectionsInView("Skills");
+
   const { ref, inView } = useInView({
-    threshold: 0.45,
+    threshold: 0.5,
   });
   const { setActiveSection } = useActiveSectionContext();
 
@@ -31,7 +34,7 @@ const Skills = () => {
 
   return (
     <section ref={ref} id="skills" className="w-full p-2 mb-40 scroll-mt-28">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
+      <div className="max-w-[1240px] mx-auto flex flex-col justify-center">
         <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-10 ">
           Skills
         </p>

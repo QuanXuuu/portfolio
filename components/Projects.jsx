@@ -5,16 +5,18 @@ import ProjectItem from "./ProjectItem";
 import TCGMON from "@/public/assets/projects/TCGMON.png";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+// import { useSectionsInView } from "@/lib/hooks";
 
 const Projects = () => {
+  // const { ref } = useSectionsInView("Projects");
   const { ref, inView } = useInView({
-    threshold: 0.7,
+    threshold: 0.5,
   });
   const { setActiveSection } = useActiveSectionContext();
 
   useEffect(() => {
     if (inView) {
-      setActiveSection("Projects");
+      setActiveSection("About");
     }
   }, [inView, setActiveSection]);
 

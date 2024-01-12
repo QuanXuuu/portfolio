@@ -5,24 +5,28 @@ import Image from "next/image";
 import profilePic from "@/public/assets/profilePic.jpg";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+// import { useSectionsInView } from "@/lib/hooks";
 
 const About = () => {
+  // const { ref } = useSectionsInView("About");
+  // console.log("ref", ref);
+
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  const { setActiveSection } = useActiveSectionContext();
 
   useEffect(() => {
     if (inView) {
       setActiveSection("About");
     }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  }, [inView, setActiveSection]);
 
   return (
     <section
       ref={ref}
       id="about"
-      className="w-full scroll-mt-28 flex items-center leading-10 sm:mb-40"
+      className="w-full scroll-mt-28 flex items-center leading-10 mb-40"
     >
       <div className="max-w-[1240px] m-auto lg:grid grid-cols-3 gap-8">
         <div className="col-span-2">
