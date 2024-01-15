@@ -26,7 +26,7 @@ const About = () => {
     <section
       ref={ref}
       id="about"
-      className="w-full scroll-mt-28 flex items-center leading-10 mb-40"
+      className="w-full scroll-mt-36 flex items-center leading-10 mb-40 px-10"
     >
       <div className="max-w-[1240px] m-auto lg:grid grid-cols-3 gap-8">
         <div className="col-span-2">

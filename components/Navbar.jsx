@@ -37,8 +37,8 @@ const Navbar = () => {
     <motion.div
       className={
         hasShadow
-          ? "fixed w-full h-20 shadow-md z-[999] bg-stone-50 ease-in-out duration-300 dark:bg-gray-900 dark:text-gray-50"
-          : "fixed w-full h-20 z-[999] bg-stone-50 dark:bg-gray-900 dark:text-gray-50"
+          ? "fixed w-full h-20 shadow-md z-[999] bg-stone-50 ease-in-out duration-300 dark:bg-gray-900 dark:text-gray-50 px-5"
+          : "fixed w-full h-20 z-[999] bg-stone-50 dark:bg-gray-900 dark:text-gray-50 px-5"
       }
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}

@@ -21,7 +21,11 @@ const Projects = () => {
   }, [inView, setActiveSection]);
 
   return (
-    <section ref={ref} id="projects" className="w-full p-2 scroll-mt-20 mb-40">
+    <section
+      ref={ref}
+      id="projects"
+      className="w-full p-2 scroll-mt-20 mb-40 px-10"
+    >
       <div className="max-w-[1240px] mx-auto">
         <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-8 ">
           Projects

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Image from "next/image";
 import html from "@/public/assets/skills/html.png";
 import css from "@/public/assets/skills/css.png";
 import javascript from "@/public/assets/skills/javascript.png";
@@ -29,11 +28,11 @@ import CodeSkillCard from "./CodeSkillCard";
 import SoftSkillCard from "./SoftSkillCard";
 // import { useSectionsInView } from "@/lib/hooks";
 
-const Skills = ({ imageUrl, altText, title }) => {
+const Skills = () => {
   // const { ref } = useSectionsInView("Skills");
 
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0.7,
   });
   const { setActiveSection } = useActiveSectionContext();
 
@@ -44,50 +43,20 @@ const Skills = ({ imageUrl, altText, title }) => {
   }, [inView, setActiveSection]);
 
   return (
-    <section ref={ref} id="skills" className="w-full p-2 mb-40 scroll-mt-28">
+    <section
+      ref={ref}
+      id="skills"
+      className="w-full p-2 mb-40 scroll-mt-20 px-10"
+    >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center">
         <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-10 ">
           Skills
         </p>
-
-        <p className="uppercase font-bold text-xl tracking-widest text-primary-light mb-4 ">
-          Coding Skills
-        </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          <CodeSkillCard imageUrl={html} altText={"html"} title="HTML" />
-          <CodeSkillCard imageUrl={css} altText={"css"} title="CSS" />
-          <CodeSkillCard
-            imageUrl={tailwind}
-            altText={"tailwind"}
-            title="Tailwind CSS"
-          />
-          <CodeSkillCard imageUrl={sass} altText={"sass"} title="Sass" />
-          <CodeSkillCard
-            imageUrl={javascript}
-            altText={"javascript"}
-            title="JavaScript"
-          />
-          <CodeSkillCard imageUrl={node} altText={"node"} title="Node.js" />
-          <CodeSkillCard imageUrl={react} altText={"react"} title="React" />
-          <CodeSkillCard imageUrl={nextjs} altText={"nextjs"} title="Next.js" />
-          <CodeSkillCard
-            imageUrl={expressjs}
-            altText={"expressjs"}
-            title="Express.js"
-          />
-          <CodeSkillCard imageUrl={mongo} altText={"mongo"} title="MongoDB" />
-          <CodeSkillCard
-            imageUrl={postman}
-            altText={"postman"}
-            title="Postman"
-          />
-          <CodeSkillCard imageUrl={github} altText={"github"} title="GitHub" />
-        </div>
-
-        <p className="uppercase font-bold text-xl tracking-widest text-primary-light my-6 ">
+        {/* Soft Skills */}
+        <p className="uppercase font-bold text-xl tracking-widest text-primary-light mb-6 ">
           Soft Skills
         </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <SoftSkillCard
             softSkillIcon={<LuMessagesSquare />}
             title="Communication"
@@ -123,6 +92,41 @@ const Skills = ({ imageUrl, altText, title }) => {
             softSkillIcon={<FaRegLightbulb />}
             title="Creativity"
           />
+        </div>
+
+        {/* Coding Skills */}
+        <p className="uppercase font-bold text-xl tracking-widest text-primary-light mb-6">
+          Coding Skills
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <CodeSkillCard imageUrl={html} altText={"html"} title="HTML" />
+          <CodeSkillCard imageUrl={css} altText={"css"} title="CSS" />
+          <CodeSkillCard
+            imageUrl={tailwind}
+            altText={"tailwind"}
+            title="Tailwind CSS"
+          />
+          <CodeSkillCard imageUrl={sass} altText={"sass"} title="Sass" />
+          <CodeSkillCard
+            imageUrl={javascript}
+            altText={"javascript"}
+            title="JavaScript"
+          />
+          <CodeSkillCard imageUrl={node} altText={"node"} title="Node.js" />
+          <CodeSkillCard imageUrl={react} altText={"react"} title="React" />
+          <CodeSkillCard imageUrl={nextjs} altText={"nextjs"} title="Next.js" />
+          <CodeSkillCard
+            imageUrl={expressjs}
+            altText={"expressjs"}
+            title="Express.js"
+          />
+          <CodeSkillCard imageUrl={mongo} altText={"mongo"} title="MongoDB" />
+          <CodeSkillCard
+            imageUrl={postman}
+            altText={"postman"}
+            title="Postman"
+          />
+          <CodeSkillCard imageUrl={github} altText={"github"} title="GitHub" />
         </div>
       </div>
     </section>
