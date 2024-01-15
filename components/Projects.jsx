@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     <section ref={ref} id="projects" className="w-full p-2 scroll-mt-20 mb-40">
       <div className="max-w-[1240px] mx-auto">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light dark:text-primary mb-8 ">
+        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-8 ">
           Projects
         </p>
         <div className="grid md:grid-cols-2 gap-8">

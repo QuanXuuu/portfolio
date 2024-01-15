@@ -35,10 +35,7 @@ const Hero = () => {
           >
             {/* Heading */}
             <h1 className="py-4">
-              Hi, I&apos;m{" "}
-              <span className="text-primary-light dark:text-primary ">
-                Quan
-              </span>
+              Hi, I&apos;m <span className="text-primary-light ">Quan</span>
             </h1>
             <h2 className="py-4">A Full-Stack Developer</h2>
           </motion.div>

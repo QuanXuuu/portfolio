@@ -30,10 +30,10 @@ const About = () => {
     >
       <div className="max-w-[1240px] m-auto lg:grid grid-cols-3 gap-8">
         <div className="col-span-2">
-          <h2 className="uppercase font-bold text-2xl tracking-widest text-primary-light dark:text-primary mb-6">
+          <h2 className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-6">
             About Me
           </h2>
-          <p className="py-2 text-lg">
+          <p className="py-2 text-lg text-justify">
             Hey! I&apos;m Quan Xu, an enthusiastic and creative
             <span className="font-semibold dark:text-primary-light">
               {" "}
@@ -50,7 +50,7 @@ const About = () => {
             technologies and trends.
           </p>
 
-          <p className="py-2 text-lg ">
+          <p className="py-2 text-lg text-justify">
             Additionally, I hold a{" "}
             <span className="font-semibold dark:text-primary-light">
               master&apos;s degree
@@ -64,7 +64,7 @@ const About = () => {
             one that&apos;s all about making things happen in the digital realm.
           </p>
 
-          <p className="py-2 text-lg">
+          <p className="py-2 text-lg text-justify">
             Please feel free to explore my portfolio to see examples of my work.
             If you have any questions or would like to collaborate, please
             don&apos;t hesitate to reach out.

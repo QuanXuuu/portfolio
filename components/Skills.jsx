@@ -16,9 +16,10 @@ import postman from "@/public/assets/skills/postman.svg";
 import github from "@/public/assets/skills/github.png";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import SkillCard from "./SkillCard";
 // import { useSectionsInView } from "@/lib/hooks";
 
-const Skills = () => {
+const Skills = ({ imageUrl, altText, title }) => {
   // const { ref } = useSectionsInView("Skills");
 
   const { ref, inView } = useInView({
@@ -35,158 +36,57 @@ const Skills = () => {
   return (
     <section ref={ref} id="skills" className="w-full p-2 mb-40 scroll-mt-28">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light dark:text-primary mb-10 ">
+        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-10 ">
           Skills
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* HMTL */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={html} width={64} height={64} alt="html" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>HTML</h3>
-              </div>
-            </div>
-          </div>
+          <SkillCard imageUrl={html} altText={"html"} title="HTML" />
 
           {/* CSS */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto ">
-                <Image src={css} width={64} height={64} alt="css" />
-              </div>
-              <div className="flex flex-col items-center justify-center ">
-                <h3>CSS</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* JS */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src={javascript}
-                  width={64}
-                  height={64}
-                  alt="javascript"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>JavaScript</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* React */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={react} width={64} height={64} alt="react" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>React</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Nextjs */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={nextjs} width={64} height={64} alt="react" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>NextJS</h3>
-              </div>
-            </div>
-          </div>
+          <SkillCard imageUrl={css} altText={"css"} title="CSS" />
 
           {/* tailwind */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={tailwind} width={64} height={64} alt="tailwind" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Tailwind</h3>
-              </div>
-            </div>
-          </div>
+          <SkillCard
+            imageUrl={tailwind}
+            altText={"tailwind"}
+            title="Tailwind CSS"
+          />
 
           {/* sass */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={sass} width={64} height={64} alt="sass" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>SASS</h3>
-              </div>
-            </div>
-          </div>
+          <SkillCard imageUrl={sass} altText={"sass"} title="Sass" />
+
+          {/* JS */}
+          <SkillCard
+            imageUrl={javascript}
+            altText={"javascript"}
+            title="JavaScript"
+          />
 
           {/* node */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={node} width={64} height={64} alt="node" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Node</h3>
-              </div>
-            </div>
-          </div>
+          <SkillCard imageUrl={node} altText={"node"} title="Node.js" />
+
+          {/* React */}
+          <SkillCard imageUrl={react} altText={"react"} title="React" />
+
+          {/* Nextjs */}
+          <SkillCard imageUrl={nextjs} altText={"nextjs"} title="Next.js" />
 
           {/* ExpressJS */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={expressjs} width={64} height={64} alt="ExpressJS" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>ExpressJS</h3>
-              </div>
-            </div>
-          </div>
+          <SkillCard
+            imageUrl={expressjs}
+            altText={"expressjs"}
+            title="Express.js"
+          />
 
           {/* Mongo */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={mongo} width={64} height={64} alt="Mongo" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>MongoDB</h3>
-              </div>
-            </div>
-          </div>
+          <SkillCard imageUrl={mongo} altText={"mongo"} title="MongoDB" />
 
           {/* Postman */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={postman} width={64} height={64} alt="Postman" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Postman</h3>
-              </div>
-            </div>
-          </div>
+          <SkillCard imageUrl={postman} altText={"postman"} title="Postman" />
 
           {/* Github */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 dark:shadow-gray-800">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={github} width={64} height={64} alt="github" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Github</h3>
-              </div>
-            </div>
-          </div>
+          <SkillCard imageUrl={github} altText={"github"} title="GitHub" />
         </div>
       </div>
     </section>

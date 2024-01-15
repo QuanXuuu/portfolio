@@ -47,7 +47,10 @@ const Navbar = () => {
         {/* Logo */}
         <div>
           <Link href="/">
-            <TbHexagonLetterQ className="text-primary" size={35} />
+            <TbHexagonLetterQ
+              className="text-primary dark:text-primary-light"
+              size={35}
+            />
           </Link>
         </div>
         <div>
@@ -57,7 +60,7 @@ const Navbar = () => {
                 <Link
                   href={link.hash}
                   className={clsx(
-                    "ml-10 text-sm uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
+                    "ml-10 text-sm py-1 uppercase hover:text-primary-light hover:scale-105 ease-in duration-300",
                     {
                       "border-b-2": activeSection === link.name,
                       "border-red-200": activeSection === link.name,

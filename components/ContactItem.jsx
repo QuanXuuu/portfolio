@@ -6,7 +6,7 @@ function ContactItem({ contactUrl, contactIcon, contactName }) {
   return (
     <div>
       <a href={contactUrl} target="_blank" rel="noreferrer">
-        <div className="flex justify-center items-center p-2 text-xl hover:text-primary-light hover:font-bold cursor-pointer hover:scale-y-110 ease-in duration-300">
+        <div className="flex justify-center items-center p-2 text-xl hover:text-primary-light cursor-pointer">
           {contactIcon}
           <span className="ml-3">{contactName}</span>
         </div>
