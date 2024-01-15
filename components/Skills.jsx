@@ -16,7 +16,17 @@ import postman from "@/public/assets/skills/postman.svg";
 import github from "@/public/assets/skills/github.png";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
-import SkillCard from "./SkillCard";
+import { LuMessagesSquare } from "react-icons/lu";
+import { RiEmpathizeLine } from "react-icons/ri";
+import { MdLanguage } from "react-icons/md";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { RiArrowLeftRightFill } from "react-icons/ri";
+import { IoTimerOutline } from "react-icons/io5";
+import { IoExtensionPuzzleOutline } from "react-icons/io5";
+import { FaRegLightbulb } from "react-icons/fa";
+
+import CodeSkillCard from "./CodeSkillCard";
+import SoftSkillCard from "./SoftSkillCard";
 // import { useSectionsInView } from "@/lib/hooks";
 
 const Skills = ({ imageUrl, altText, title }) => {
@@ -39,54 +49,80 @@ const Skills = ({ imageUrl, altText, title }) => {
         <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-10 ">
           Skills
         </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* HMTL */}
-          <SkillCard imageUrl={html} altText={"html"} title="HTML" />
 
-          {/* CSS */}
-          <SkillCard imageUrl={css} altText={"css"} title="CSS" />
-
-          {/* tailwind */}
-          <SkillCard
+        <p className="uppercase font-bold text-xl tracking-widest text-primary-light mb-4 ">
+          Coding Skills
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <CodeSkillCard imageUrl={html} altText={"html"} title="HTML" />
+          <CodeSkillCard imageUrl={css} altText={"css"} title="CSS" />
+          <CodeSkillCard
             imageUrl={tailwind}
             altText={"tailwind"}
             title="Tailwind CSS"
           />
-
-          {/* sass */}
-          <SkillCard imageUrl={sass} altText={"sass"} title="Sass" />
-
-          {/* JS */}
-          <SkillCard
+          <CodeSkillCard imageUrl={sass} altText={"sass"} title="Sass" />
+          <CodeSkillCard
             imageUrl={javascript}
             altText={"javascript"}
             title="JavaScript"
           />
-
-          {/* node */}
-          <SkillCard imageUrl={node} altText={"node"} title="Node.js" />
-
-          {/* React */}
-          <SkillCard imageUrl={react} altText={"react"} title="React" />
-
-          {/* Nextjs */}
-          <SkillCard imageUrl={nextjs} altText={"nextjs"} title="Next.js" />
-
-          {/* ExpressJS */}
-          <SkillCard
+          <CodeSkillCard imageUrl={node} altText={"node"} title="Node.js" />
+          <CodeSkillCard imageUrl={react} altText={"react"} title="React" />
+          <CodeSkillCard imageUrl={nextjs} altText={"nextjs"} title="Next.js" />
+          <CodeSkillCard
             imageUrl={expressjs}
             altText={"expressjs"}
             title="Express.js"
           />
+          <CodeSkillCard imageUrl={mongo} altText={"mongo"} title="MongoDB" />
+          <CodeSkillCard
+            imageUrl={postman}
+            altText={"postman"}
+            title="Postman"
+          />
+          <CodeSkillCard imageUrl={github} altText={"github"} title="GitHub" />
+        </div>
 
-          {/* Mongo */}
-          <SkillCard imageUrl={mongo} altText={"mongo"} title="MongoDB" />
+        <p className="uppercase font-bold text-xl tracking-widest text-primary-light my-6 ">
+          Soft Skills
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <SoftSkillCard
+            softSkillIcon={<LuMessagesSquare />}
+            title="Communication"
+          />
+          <SoftSkillCard softSkillIcon={<RiEmpathizeLine />} title="Empathy" />
 
-          {/* Postman */}
-          <SkillCard imageUrl={postman} altText={"postman"} title="Postman" />
+          <SoftSkillCard
+            softSkillIcon={<MdLanguage />}
+            title="Cultural Intelligence"
+          />
 
-          {/* Github */}
-          <SkillCard imageUrl={github} altText={"github"} title="GitHub" />
+          <SoftSkillCard
+            softSkillIcon={<FaPeopleGroup />}
+            title="Collaboration"
+          />
+
+          <SoftSkillCard
+            softSkillIcon={<RiArrowLeftRightFill />}
+            title="Adaptability"
+          />
+
+          <SoftSkillCard
+            softSkillIcon={<IoTimerOutline />}
+            title="Time Management"
+          />
+
+          <SoftSkillCard
+            softSkillIcon={<IoExtensionPuzzleOutline />}
+            title="Problem Solving"
+          />
+
+          <SoftSkillCard
+            softSkillIcon={<FaRegLightbulb />}
+            title="Creativity"
+          />
         </div>
       </div>
     </section>
