@@ -40,8 +40,9 @@ const Navbar = () => {
           ? "fixed w-full h-20 shadow-md z-[999] bg-stone-50 ease-in-out duration-300 dark:bg-gray-900 dark:text-gray-50 px-5"
           : "fixed w-full h-20 z-[999] bg-stone-50 dark:bg-gray-900 dark:text-gray-50 px-5"
       }
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      initial={{ y: -100, opacity: 0, scale: 0.5 }}
+      animate={{ y: 0, opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
     >
       <div className="flex justify-between items-center w-full h-full px-8 2xl:px-16 ">
         {/* Logo */}

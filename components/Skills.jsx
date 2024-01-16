@@ -46,17 +46,17 @@ const Skills = () => {
     <section
       ref={ref}
       id="skills"
-      className="w-full p-2 mb-40 scroll-mt-20 px-10"
+      className="w-full p-2 mb-48 scroll-mt-24 px-10 snap-center"
     >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-10 ">
+        <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-12 lg:text-4xl lg:mb-16">
           Skills
-        </p>
+        </h2>
         {/* Soft Skills */}
-        <p className="uppercase font-bold text-xl tracking-widest text-primary-light mb-6 ">
+        <h3 className="uppercase font-bold text-xl tracking-widest text-primary-light mb-6 lg:text-2xl lg:mb-10">
           Soft Skills
-        </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           <SoftSkillCard
             softSkillIcon={<LuMessagesSquare />}
             title="Communication"
@@ -95,10 +95,10 @@ const Skills = () => {
         </div>
 
         {/* Coding Skills */}
-        <p className="uppercase font-bold text-xl tracking-widest text-primary-light mb-6">
+        <h3 className="uppercase font-bold text-xl tracking-widest text-primary-light mb-6 lg:text-2xl lg:mb-10">
           Coding Skills
-        </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <CodeSkillCard imageUrl={html} altText={"html"} title="HTML" />
           <CodeSkillCard imageUrl={css} altText={"css"} title="CSS" />
           <CodeSkillCard

@@ -8,10 +8,16 @@ import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { BsFilePersonFill } from "react-icons/bs";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 // import { useSectionsInView } from "@/lib/hooks";
 
 const Hero = () => {
   // const { ref } = useSectionsInView("Home");
+
+  const [text, count] = useTypewriter({
+    words: ["A Full-Stack Developer"],
+    delaySpeed: 1500,
+  });
 
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -25,26 +31,32 @@ const Hero = () => {
   }, [inView, setActiveSection]);
 
   return (
-    <section ref={ref} id="home" className="w-full h-screen text-center">
+    <section
+      ref={ref}
+      id="home"
+      className="w-full h-screen text-center snap-start"
+    >
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div className="dark:text-gray-50">
           <motion.div
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: -100, opacity: 0, scale: 0.5 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
             className="dark:text-gray-50"
           >
             {/* Heading */}
-            <h1 className="py-4">
+            <h1 className="py-4 tracking-widest">
               Hi, I&apos;m <span className="text-primary-light ">Quan</span>
             </h1>
-            <h2 className="py-4">A Full-Stack Developer</h2>
+            <h2 className="py-4 tracking-widest">{text}</h2>
           </motion.div>
 
           <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: 100, opacity: 0, scale: 0.5 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
           >
-            <p className="py-4 text-lg leading-8 lg:text-xl lg:py-6 lg:leading-10 max-w-[70%] m-auto">
+            <p className="py-4 text-lg leading-8 lg:text-xl lg:py-6 lg:leading-10 max-w-[70%] m-auto tracking-wider">
               I enjoy building responsive front-end websites and web
               applications while utilizing back-end technologies. My focus is
               <span className="font-bold"> React</span>.

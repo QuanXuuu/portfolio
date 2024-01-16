@@ -13,7 +13,7 @@ const ProjectItem = ({
   projectCodeUrl,
 }) => {
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 dark:shadow-gray-800 rounded-xl p-4 group hover:bg-gradient-to-r from-red-100 to-red-300">
+    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 dark:shadow-gray-800 rounded-xl group hover:bg-gradient-to-r from-red-100 to-red-200">
       <Image
         className="rounded-xl group-hover:opacity-10"
         src={backgroundImg}

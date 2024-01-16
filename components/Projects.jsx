@@ -24,13 +24,13 @@ const Projects = () => {
     <section
       ref={ref}
       id="projects"
-      className="w-full p-2 scroll-mt-20 mb-40 px-10"
+      className="w-full p-2 scroll-mt-24 mb-44 px-10 snap-start"
     >
       <div className="max-w-[1240px] mx-auto">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-8 ">
+        <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-8 lg:text-4xl lg:mb-12">
           Projects
-        </p>
-        <div className="grid md:grid-cols-2 gap-8">
+        </h2>
+        <div className="grid md:grid-cols-1 gap-8">
           <ProjectItem
             title="TCGMON"
             backgroundImg={TCGMON}

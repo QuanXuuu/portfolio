@@ -26,21 +26,22 @@ const About = () => {
     <section
       ref={ref}
       id="about"
-      className="w-full scroll-mt-36 flex items-center leading-10 mb-40 px-10"
+      className="w-full scroll-mt-40 flex items-center leading-10 mb-64 px-10 snap-center"
     >
       <div className="max-w-[1240px] m-auto lg:grid grid-cols-3 gap-8">
         <div className="col-span-2">
-          <h2 className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-6">
-            About Me
+          <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-6 lg:text-4xl lg:mb-12">
+            About
           </h2>
-          <p className="py-2 text-lg text-justify">
+          <p className="py-2 text-lg text-justify leading-8">
             Hey! I&apos;m Quan Xu, an enthusiastic and creative
             <span className="font-semibold dark:text-primary-light">
               {" "}
-              Full-stack Developer
-            </span>{" "}
-            based in Krempe,{" "}
+              Full-stack Developer{" "}
+            </span>
+            based in Krempe,
             <span className="font-semibold dark:text-primary-light">
+              {" "}
               Germany
             </span>
             . With a solid background in web development and profound
@@ -49,22 +50,20 @@ const About = () => {
             enabled me to refine my skills and stay current with the latest
             technologies and trends.
           </p>
-
-          <p className="py-2 text-lg text-justify">
-            Additionally, I hold a{" "}
-            <span className="font-semibold dark:text-primary-light">
-              master&apos;s degree
-            </span>{" "}
-            in
+          <p className="py-2 text-lg text-justify leading-8">
+            Additionally, I hold a
             <span className="font-semibold dark:text-primary-light">
               {" "}
+              master&apos;s degree
+            </span>{" "}
+            in{" "}
+            <span className="font-semibold dark:text-primary-light">
               Linguistics
             </span>
             . Learning to code feels like decoding a different kind of language,
             one that&apos;s all about making things happen in the digital realm.
           </p>
-
-          <p className="py-2 text-lg text-justify">
+          <p className="py-2 text-lg text-justify leading-8">
             Please feel free to explore my portfolio to see examples of my work.
             If you have any questions or would like to collaborate, please
             don&apos;t hesitate to reach out.
