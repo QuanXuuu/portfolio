@@ -26,7 +26,7 @@ const About = () => {
     <section
       ref={ref}
       id="about"
-      className="w-full scroll-mt-40 flex items-center leading-10 mb-64 px-10 snap-center"
+      className="w-full h-screen mb-[100px] flex items-center leading-10 px-10 snap-center border border-white"
     >
       <div className="max-w-[1240px] m-auto lg:grid grid-cols-3 gap-8">
         <div className="col-span-2">
@@ -69,7 +69,7 @@ const About = () => {
             don&apos;t hesitate to reach out.
           </p>
         </div>
-        <div className="w-full h-auto m-auto  dark:shadow-gray-900 rounded-xl flex items-center justify-center hover:scale-105 ease-in duration-300 sm:mt-8 p-2">
+        <div className="w-full m-auto dark:shadow-gray-900 rounded-xl flex items-center justify-center hover:scale-105 ease-in duration-300 sm:mt-10 p-2 border border-white">
           <Image src={profilePic} alt="Profile Pic" className="rounded-xl" />
         </div>
       </div>
