@@ -24,9 +24,9 @@ const Projects = () => {
     <section
       ref={ref}
       id="projects"
-      className="w-full p-2 scroll-mt-24 mb-44 px-10 snap-start"
+      className="w-full lg:h-screen mt-52 scroll-mt-20 snap-start"
     >
-      <div className="max-w-[1240px] mx-auto">
+      <div className="max-w-[1240px] mx-auto px-2 py-16">
         <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-10 lg:text-4xl lg:mb-12">
           Projects
         </h2>

@@ -46,7 +46,7 @@ const Skills = () => {
     <section
       ref={ref}
       id="skills"
-      className="w-full p-2 mb-56 scroll-mt-36 px-10 snap-center border border-white sm:mt-44"
+      className="w-full lg:h-screen p-3 scroll-mt-36 snap-center mt-36"
     >
       <div className="max-w-[1240px] mx-auto h-full flex flex-col justify-center">
         <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-12 lg:text-4xl lg:mb-16">

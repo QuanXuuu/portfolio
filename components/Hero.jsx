@@ -36,7 +36,7 @@ const Hero = () => {
       id="home"
       className="w-full h-screen text-center snap-start"
     >
-      <div className="max-w-[1240px] h-full mx-auto p-2 flex justify-center items-center">
+      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div className="dark:text-gray-50">
           <motion.div
             initial={{ y: -100, opacity: 0, scale: 0.5 }}

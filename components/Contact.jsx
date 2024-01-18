@@ -23,7 +23,7 @@ const Contact = () => {
   }, [inView, setActiveSection]);
 
   return (
-    <section ref={ref} id="contact" className="w-full p-2 mb-60 px-10">
+    <section ref={ref} id="contact" className="w-full mt-52 p-2 mb-60 ">
       <div className="max-w-[1240px] mx-auto">
         <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-6 lg:text-4xl">
           Contact
