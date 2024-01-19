@@ -33,7 +33,7 @@ const About = () => {
           <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-6 lg:text-4xl lg:mb-12">
             About
           </h2>
-          <p className="py-2 text-lg text-justify leading-8">
+          <p className="pt-2 text-lg text-justify leading-8">
             Hey! I&apos;m Quan Xu, an enthusiastic and creative
             <span className="font-semibold dark:text-primary-light">
               {" "}
