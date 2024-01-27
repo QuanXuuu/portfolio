@@ -33,35 +33,30 @@ const About = () => {
           <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-6 lg:text-4xl lg:mb-12">
             About
           </h2>
-          <p className="pt-2 text-lg text-justify leading-8">
-            Hey! I&apos;m Quan Xu, an enthusiastic and creative
+          <p className="py-2 text-lg text-justify leading-8">
+            Hey! I&apos;m Quan Xu, an enthusiastic
             <span className="font-semibold dark:text-primary-light">
               {" "}
-              Full-stack Developer{" "}
+              Full-Stack Developer{" "}
             </span>
-            based in Krempe,
+            based in
             <span className="font-semibold dark:text-primary-light">
               {" "}
-              Germany
+              Northern Germany
             </span>
-            . With a solid background in web development and profound
-            appreciation for design, I am dedicated to crafting user-friendly
-            and visually appealing web experiences. These experiences have
-            enabled me to refine my skills and stay current with the latest
-            technologies and trends.
+            . I have a good background in web development and enjoy creating
+            user-friendly and well-designed applications. I am actively keeping
+            up with the latest technologies and trends.
           </p>
           <p className="py-2 text-lg text-justify leading-8">
-            Additionally, I hold a
+            My background is in
             <span className="font-semibold dark:text-primary-light">
               {" "}
-              master&apos;s degree
-            </span>{" "}
-            in{" "}
-            <span className="font-semibold dark:text-primary-light">
-              Linguistics
+              linguistics{" "}
             </span>
-            . Learning to code feels like decoding a different kind of language,
-            one that&apos;s all about making things happen in the digital realm.
+            and hold a Master&apos;s in Literature. Learning to code is like
+            discovering a language that lets me create things in the digital
+            world.
           </p>
           <p className="py-2 text-lg text-justify leading-8">
             Please feel free to explore my portfolio to see examples of my work.

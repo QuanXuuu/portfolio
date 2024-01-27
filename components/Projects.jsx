@@ -30,7 +30,7 @@ const Projects = () => {
         <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-10 lg:text-4xl lg:mb-12">
           Projects
         </h2>
-        <div className="grid md:grid-cols-1 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             title="TCGMON"
             backgroundImg={TCGMON}

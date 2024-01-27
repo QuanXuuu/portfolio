@@ -15,7 +15,7 @@ const Hero = () => {
   // const { ref } = useSectionsInView("Home");
 
   const [text, count] = useTypewriter({
-    words: ["A Full-Stack Developer"],
+    words: ["Full-Stack Developer"],
     delaySpeed: 1500,
   });
 
@@ -57,8 +57,8 @@ const Hero = () => {
             transition={{ duration: 1 }}
           >
             <p className="py-4 text-lg leading-8 lg:text-xl lg:py-6 lg:leading-10 max-w-[70%] m-auto tracking-wider">
-              I enjoy building responsive front-end websites and web
-              applications while utilizing back-end technologies. My focus is
+              I build responsive websites and applications using frontend and
+              backend technologies. My focus is
               <span className="font-bold"> React</span>.
             </p>
 
