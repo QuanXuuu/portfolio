@@ -1,4 +1,4 @@
-## My Portfolio [please have a look](https://quanxu-portfolio.vercel.app)
+## [My Portfolio](https://quanxu-portfolio.vercel.app)
 
 
 ## Teck stack used:
