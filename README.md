@@ -1,7 +1,7 @@
 ## [My Portfolio](https://quanxu-portfolio.vercel.app)
 
 
-## Teck stack used:
+### Teck stack used:
 - [React](https://react.dev/)
 - [Next.js](https://nextjs.org/)
 - [TailWind CSS](https://nextjs.org/)
