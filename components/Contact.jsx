@@ -1,59 +1,52 @@
 "use client";
 
 import React, { useEffect } from "react";
+import ContactItem from "./ContactItem";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+// import { useSectionsInView } from "@/lib/hooks";
 
 const Contact = () => {
+  // const { ref } = useSectionsInView("Contact");
+
   const { ref, inView } = useInView({
-    threshold: 0.7,
+    threshold: 0.9,
   });
   const { setActiveSection } = useActiveSectionContext();
 
   useEffect(() => {
     if (inView) {
-      setActiveSection("contact");
+      setActiveSection("Contact");
     }
   }, [inView, setActiveSection]);
 
   return (
-    <section ref={ref} id="contact" className="w-full p-2">
+    <section ref={ref} id="contact" className="w-full mt-36 md:mt-40 p-2 mb-56">
       <div className="max-w-[1240px] mx-auto">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-6">
+        <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-6 lg:text-4xl">
           Contact
-        </p>
+        </h2>
 
         <div className="flex flex-col items-start justify-center">
-          <a
-            href="https://www.linkedin.com/in/quanxuuu"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="flex justify-center items-center p-2 text-xl text-gray-600 hover:text-primary-light cursor-pointer hover:scale-y-110 ease-in duration-300">
-              <FaLinkedinIn />
-              <span className="ml-3">quanxuuu</span>
-            </div>
-          </a>
+          <ContactItem
+            contactUrl="https://www.linkedin.com/in/quanxuuu"
+            contactIcon={<FaLinkedinIn />}
+            contactName="quanxuuu"
+          />
 
-          <a
-            href="https://github.com/quanxuuu"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className=" flex justify-center items-center p-2 text-xl text-gray-600 hover:text-primary-light cursor-pointer hover:scale-y-110 ease-in duration-300">
-              <FaGithub />
-              <p className="ml-3">quanxuuu</p>
-            </div>
-          </a>
+          <ContactItem
+            contactUrl="https://github.com/quanxuuu"
+            contactIcon={<FaGithub />}
+            contactName="quanxuuu"
+          />
 
-          <div href="/">
-            <div className=" flex justify-center items-center p-2 text-xl text-gray-600 hover:text-primary-light cursor-pointer hover:scale-y-110 ease-in duration-300">
-              <MdOutlineMarkEmailUnread />
-              <p className="ml-3">xuquan69220@gmail.com</p>
-            </div>
-          </div>
+          <ContactItem
+            contactUrl="mailto:xuquan69220@gmail.com"
+            contactIcon={<MdOutlineMarkEmailUnread />}
+            contactName="xuquan69220@gmail.com"
+          />
         </div>
       </div>
     </section>

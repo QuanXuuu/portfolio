@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Image from "next/image";
 import html from "@/public/assets/skills/html.png";
 import css from "@/public/assets/skills/css.png";
 import javascript from "@/public/assets/skills/javascript.png";
@@ -16,174 +15,118 @@ import postman from "@/public/assets/skills/postman.svg";
 import github from "@/public/assets/skills/github.png";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/ActiveSectionContext";
+import { LuMessagesSquare } from "react-icons/lu";
+import { RiEmpathizeLine } from "react-icons/ri";
+import { MdLanguage } from "react-icons/md";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { RiArrowLeftRightFill } from "react-icons/ri";
+import { IoTimerOutline } from "react-icons/io5";
+import { IoExtensionPuzzleOutline } from "react-icons/io5";
+import { FaRegLightbulb } from "react-icons/fa";
+
+import CodeSkillCard from "./CodeSkillCard";
+import SoftSkillCard from "./SoftSkillCard";
+// import { useSectionsInView } from "@/lib/hooks";
 
 const Skills = () => {
+  // const { ref } = useSectionsInView("Skills");
+
   const { ref, inView } = useInView({
-    threshold: 0.45,
+    threshold: 0.7,
   });
   const { setActiveSection } = useActiveSectionContext();
 
   useEffect(() => {
     if (inView) {
-      setActiveSection("skills");
+      setActiveSection("Skills");
     }
   }, [inView, setActiveSection]);
 
   return (
-    <section ref={ref} id="skills" className="w-full p-2 scroll-mt-28 mb-40">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <p className="uppercase font-bold text-2xl tracking-widest text-primary-light mb-10 ">
+    <section
+      ref={ref}
+      id="skills"
+      className="w-full lg:h-screen p-3 scroll-mt-36 snap-center mt-36 md:mt-48"
+    >
+      <div className="max-w-[1240px] mx-auto h-full flex flex-col justify-center">
+        <h2 className="uppercase font-bold text-3xl tracking-widest text-primary-light mb-12 lg:text-4xl lg:mb-16">
           Skills
-        </p>
+        </h2>
+        {/* Soft Skills */}
+        <h3 className="uppercase font-bold text-xl tracking-widest text-primary-light mb-6 lg:text-2xl lg:mb-10">
+          Soft Skills
+        </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          <SoftSkillCard
+            softSkillIcon={<LuMessagesSquare />}
+            title="Communication"
+          />
+          <SoftSkillCard softSkillIcon={<RiEmpathizeLine />} title="Empathy" />
+
+          <SoftSkillCard
+            softSkillIcon={<MdLanguage />}
+            title="Cultural Intelligence"
+          />
+
+          <SoftSkillCard
+            softSkillIcon={<FaPeopleGroup />}
+            title="Collaboration"
+          />
+
+          <SoftSkillCard
+            softSkillIcon={<RiArrowLeftRightFill />}
+            title="Adaptability"
+          />
+
+          <SoftSkillCard
+            softSkillIcon={<IoTimerOutline />}
+            title="Time Management"
+          />
+
+          <SoftSkillCard
+            softSkillIcon={<IoExtensionPuzzleOutline />}
+            title="Problem Solving"
+          />
+
+          <SoftSkillCard
+            softSkillIcon={<FaRegLightbulb />}
+            title="Creativity"
+          />
+        </div>
+
+        {/* Coding Skills */}
+        <h3 className="uppercase font-bold text-xl tracking-widest text-primary-light mb-6 lg:text-2xl lg:mb-10">
+          Coding Skills
+        </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* HMTL */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={html} width={64} height={64} alt="html" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>HTML</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* CSS */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto ">
-                <Image src={css} width={64} height={64} alt="css" />
-              </div>
-              <div className="flex flex-col items-center justify-center ">
-                <h3>CSS</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* JS */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image
-                  src={javascript}
-                  width={64}
-                  height={64}
-                  alt="javascript"
-                />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>JavaScript</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* React */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={react} width={64} height={64} alt="react" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>React</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Nextjs */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={nextjs} width={64} height={64} alt="react" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>NextJS</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* tailwind */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={tailwind} width={64} height={64} alt="tailwind" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Tailwind</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* sass */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={sass} width={64} height={64} alt="sass" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>SASS</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* node */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={node} width={64} height={64} alt="node" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Node</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* ExpressJS */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={expressjs} width={64} height={64} alt="ExpressJS" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>ExpressJS</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Mongo */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={mongo} width={64} height={64} alt="Mongo" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>MongoDB</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Postman */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={postman} width={64} height={64} alt="Postman" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Postman</h3>
-              </div>
-            </div>
-          </div>
-
-          {/* Github */}
-          <div className="p-6 shadow-md rounded-xl hover:scale-105 ease-in duration-300 ">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={github} width={64} height={64} alt="github" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Github</h3>
-              </div>
-            </div>
-          </div>
+          <CodeSkillCard imageUrl={html} altText={"html"} title="HTML" />
+          <CodeSkillCard imageUrl={css} altText={"css"} title="CSS" />
+          <CodeSkillCard
+            imageUrl={tailwind}
+            altText={"tailwind"}
+            title="Tailwind CSS"
+          />
+          <CodeSkillCard imageUrl={sass} altText={"sass"} title="Sass" />
+          <CodeSkillCard
+            imageUrl={javascript}
+            altText={"javascript"}
+            title="JavaScript"
+          />
+          <CodeSkillCard imageUrl={node} altText={"node"} title="Node.js" />
+          <CodeSkillCard imageUrl={react} altText={"react"} title="React" />
+          <CodeSkillCard imageUrl={nextjs} altText={"nextjs"} title="Next.js" />
+          <CodeSkillCard
+            imageUrl={expressjs}
+            altText={"expressjs"}
+            title="Express.js"
+          />
+          <CodeSkillCard imageUrl={mongo} altText={"mongo"} title="MongoDB" />
+          <CodeSkillCard
+            imageUrl={postman}
+            altText={"postman"}
+            title="Postman"
+          />
+          <CodeSkillCard imageUrl={github} altText={"github"} title="GitHub" />
         </div>
       </div>
     </section>

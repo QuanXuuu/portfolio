@@ -4,13 +4,13 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="mb-10 px-4 text-center text-gray-600">
+    <footer className="mb-10 px-4 text-center">
       <small className="mb-2 block text-xs">
-        &copy;2024 Quan XU. All rights reserved.
+        Copyright &copy;2024 Quan XU. All rights reserved.
       </small>
-      <p className="text-xs">
-        <span>About this website:</span> built with React & Next.js, Tailwind
-        CSS, Vercel hosting.
+      <p className="text-[0.5rem]">
+        This website is built with React & Next.js, Tailwind CSS, Framer Motion
+        and Vercel hosting.
       </p>
     </footer>
   );
